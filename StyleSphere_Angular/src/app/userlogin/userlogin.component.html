@@ -1,0 +1,38 @@
+<h1 class="text-success text-center">
+     LogIn
+</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+                        <div class="form-group">
+                            <label for="email">
+                                Email
+                            </label>
+                            <input type="email"
+                                   class="form-control"
+                                   name="email"
+                                   placeholder="Email" required  ngModel/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">
+                                Password
+                            </label>
+                            <input type="password"
+                                   class="form-control"
+                                   name="password"
+                                   placeholder="Password" ngModel
+                                required />
+                        </div>
+                        <button class="btn btn-primary">
+                            Login
+                        </button>
+                    </form>
+                                     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

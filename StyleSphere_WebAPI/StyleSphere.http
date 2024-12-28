@@ -1,0 +1,6 @@
+@StyleSphere_HostAddress = http://localhost:5145
+
+GET {{StyleSphere_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

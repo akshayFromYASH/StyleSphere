@@ -1,0 +1,56 @@
+<div class="container">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="col text-center p-2 mb-3 bg-light">
+        <span>User Registration</span>
+      </div>
+      <div class="form-group">
+        <label for="userName">Username:</label>
+        <input type="text" class="form-control" id="userName" formControlName="userName" />
+        <!-- <div *ngIf="registrationForm.get('userName').invalid && (registrationForm.get('userName').dirty || registrationForm.get('userName').touched)" class="alert alert-danger">
+          Username is required.
+        </div> -->
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" formControlName="email" />
+        <!-- <div *ngIf="registrationForm.get('email').invalid && (registrationForm.get('email').dirty || registrationForm.get('email').touched)" class="alert alert-danger">
+          <div *ngIf="registrationForm.get('email').errors.required">Email is required.</div>
+          <div *ngIf="registrationForm.get('email').errors.email">Invalid email format.</div>
+        </div> -->
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" formControlName="password" />
+        <!-- <div *ngIf="registrationForm.get('password').invalid && (registrationForm.get('password').dirty || registrationForm.get('password').touched)" class="alert alert-danger">
+          <div *ngIf="registrationForm.get('password').errors.required">Password is required.</div>
+          <div *ngIf="registrationForm.get('password').errors.minlength">Password must be at least 6 characters long.</div>
+        </div> -->
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber" />
+        <!-- <div *ngIf="registrationForm.get('phoneNumber').invalid && (registrationForm.get('phoneNumber').dirty || registrationForm.get('phoneNumber').touched)" class="alert alert-danger">
+          <div *ngIf="registrationForm.get('phoneNumber').errors.required">Phone Number is required.</div>
+          <div *ngIf="registrationForm.get('phoneNumber').errors.pattern">Invalid phone number format.</div>
+        </div> -->
+      </div>
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <input type="text" class="form-control" id="status" formControlName="status" readonly/>
+        <!-- <div *ngIf="registrationForm.get('status').invalid && (registrationForm.get('status').dirty || registrationForm.get('status').touched)" class="alert alert-danger">
+          Status is required.
+        </div> -->
+      </div>
+      <div class="form-group">
+        <label for="userRole">User Role:</label>
+        <select name="userRole" id="userRole" formControlName="userRole">
+          <option value="seller">Seller</option>
+          <option value="customer">Customer</option>
+        </select>
+        <!-- <input type="text" class="form-control" id="userRole" formControlName="userRole" /> -->
+        
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">Register</button>
+    </form>
+  </div>
+  
