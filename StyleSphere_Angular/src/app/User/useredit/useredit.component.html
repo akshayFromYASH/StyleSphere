@@ -1,0 +1,36 @@
+
+<div class="container">
+    <form #userform="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <h1>Edit User</h1>
+        </div>
+        <div class="form-group">
+            <label for="id">User ID</label><br>
+            <input #UserId type="number" readonly name="id" class="form-control" [(ngModel)]="user.userId">
+        </div>
+        <div class="form-group">
+            <label for="name">User Name</label><br>
+            <input #UserName="ngModel"  name="UserName" class="form-control" [(ngModel)]="user.userName">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label><br>
+            <input #UserEmail="ngModel" name="UserEmail" class="form-control" [(ngModel)]="user.email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label><br>
+            <input #UserPhone="ngModel" name="UserPhone" class="form-control" [(ngModel)]="user.phoneNumber">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label><br>
+            <input #UserStatus="ngModel" name="UserStatus" class="form-control" [(ngModel)]="user.status">
+        </div>
+        <div class="form-group">
+            <label for="role">User Role</label><br>
+            <input #UserRole="ngModel" name="UserRole" class="form-control" [(ngModel)]="user.userRole">
+        </div>
+        <div class="form-group">
+            <a routerLink="editUser"></a>
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>

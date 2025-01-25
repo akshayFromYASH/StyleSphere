@@ -5,7 +5,7 @@
   create table users(
 	UserId int primary key identity(1,1),
 	UserName varchar(30),
-	EmailId varchar(30),
+	Email varchar(30),
 	Password varchar(30),
 	PhoneNumber varchar(10),
 	Status varchar(20),
@@ -19,6 +19,7 @@
 	Image varchar(500),
 	Availaibility varchar(30),
 	CategoryId int,
+	UserId int,
 	Price decimal,
 	Stock_Quantity int
   );

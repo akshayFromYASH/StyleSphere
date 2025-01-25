@@ -13,5 +13,6 @@ namespace StyleSphere.Repository{
             var data = await dbset.FindAsync(id);
             return data;
         }
+        
     }
 }

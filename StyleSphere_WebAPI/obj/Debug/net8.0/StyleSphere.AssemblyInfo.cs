@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StyleSphere")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ee852d4215292dc2d973c695e808d25fea4bfe9")]
 [assembly: System.Reflection.AssemblyProductAttribute("StyleSphere")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StyleSphere")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

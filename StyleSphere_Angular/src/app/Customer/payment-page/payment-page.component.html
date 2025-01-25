@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Payment Page</h2>
+  <form>
+    <div class="form-group">
+      <label for="paymentMethod">Payment Method</label>
+      <select id="paymentMethod" class="form-control" [(ngModel)]="payment.payment_Method" name="paymentMethod">
+        <option value="Credit Card">Credit Card</option>
+        <option value="Debit Card">Debit Card</option>
+        <option value="Net Banking">Net Banking</option>
+        <option value="UPI">UPI</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="totalAmount">Total Amount</label>
+      <input type="number" id="totalAmount" class="form-control" [(ngModel)]="payment.total_Amount" name="totalAmount" required>
+    </div>
+    <div class="form-group">
+      <label for="shippingAmount">Shipping Amount</label>
+      <input type="number" id="shippingAmount" class="form-control" [(ngModel)]="payment.shipping_Amount" name="shippingAmount" required>
+    </div>
+    <div class="form-group">
+      <label for="discountAmount">Discount Amount</label>
+      <input type="number" id="discountAmount" class="form-control" [(ngModel)]="payment.discount_Amount" name="discountAmount" required>
+    </div>
+    <div class="form-group">
+      <label for="netAmount">Net Amount</label>
+      <input type="number" id="netAmount" class="form-control" [(ngModel)]="payment.net_Amount" name="netAmount" readonly>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" (click)="makePayment()">Pay Now</button>
+  </form>
+</div>

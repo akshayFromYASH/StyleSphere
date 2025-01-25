@@ -1,0 +1,49 @@
+<div class="container">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit(productForm)">
+    <div>
+      <h2>Product Form</h2>
+    </div>
+
+    <div class="form-group">
+      <label for="prodName">Product Name</label>
+      <input type="text" id="prodName" name="prodName" class="form-control" formControlName="prodName">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description" class="form-control" formControlName="description">
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input type="text" id="image" name="image" class="form-control" formControlName="image">
+    </div>
+
+    <div class="form-group">
+      <label for="availablility">Availability</label>
+      <input type="text" id="availablility" name="availablility" class="form-control" formControlName="availablility">
+    </div>
+
+    <div class="form-group">
+      <label for="categoryId">Category ID</label>
+      <input type="text" id="categoryId" name="categoryId" class="form-control" formControlName="categoryId">
+    </div>
+
+    <div class="form-group">
+      <label for="userId">User ID</label>
+      <input type="text" id="userId" name="userId" class="form-control" formControlName="userId">
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" class="form-control" formControlName="price">
+    </div>
+
+    <div class="form-group">
+      <label for="stock_Quantity">Stock Quantity</label>
+      <input type="number" id="stock_Quantity" name="stock_Quantity" class="form-control" formControlName="stock_Quantity">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

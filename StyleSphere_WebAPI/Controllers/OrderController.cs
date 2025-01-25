@@ -22,6 +22,7 @@ namespace StyleSphere.Controllers{
             orderRepository = new OrderRepository(_unitOfWork);
         }
 
+    
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> Get(){
             return await orderRepository.Get();

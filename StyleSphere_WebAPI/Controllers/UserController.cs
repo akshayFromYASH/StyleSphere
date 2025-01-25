@@ -16,7 +16,7 @@ namespace StyleSphere.Controllers{
         // We cannot access custom methods in IUserRepository  without this line 
         private readonly IUserRepository userRepository;
         
-        // Constructor with injection of interface IUnitOfWork and UserRepository
+        // Constructor injection of interface IUnitOfWork and UserRepository
         public UserController(IUnitOfWork unitOfWork){
             _unitOfWork = unitOfWork;
             userRepository = new UserRepository(_unitOfWork);
@@ -33,7 +33,7 @@ namespace StyleSphere.Controllers{
         }
 
         [HttpPost]
-        public async Task<ActionResult<User>> Create(User user){
+        public async Task<ActionResult<User>> Create([FromBody] User user){
             return await userRepository.Create(user);
         }
 

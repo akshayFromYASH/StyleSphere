@@ -1,0 +1,66 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-4 shadow-sm">
+          <img [src]="product.image" class="card-img-top" alt="{{ product.prodName }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.prodName }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text"><small class="text-muted">Price: ₹{{ product.price }}</small></p>
+            <p class="card-text"><small class="text-muted">Stock Quantity: {{ product.stock_Quantity }}</small></p>
+            <p class="card-text">
+              <small [class.text-success]="product.availaibility === 'available'" [class.text-danger]="product.availaibility !== 'available'">
+                Availability: {{ product.availaibility }}
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-5">
+    <h3>Shipping Address</h3>
+    <form (ngSubmit)="orderNow()">
+      <div class="form-group">
+        <label for="shippingTo">Shipping To</label>
+        <input type="text" class="form-control" id="shippingTo" [(ngModel)]="shippingDetails.shippingTo" name="shippingTo" required>
+      </div>
+      <div class="form-group">
+        <label for="contactDetails">Contact Details</label>
+        <input type="text" class="form-control" id="contactDetails" [(ngModel)]="shippingDetails.contactDetails" name="contactDetails" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" [(ngModel)]="shippingDetails.address" name="address" required>
+      </div>
+      <h2>Payment Details</h2>
+       <div class="form-group" readonly>
+        <label for="paymentMethod">Payment Method</label>
+        <select id="paymentMethod" class="form-control" [(ngModel)]="payment.payment_Method" name="paymentMethod" required>
+          <option value="Credit Card">Credit Card</option>
+          <option value="Debit Card">Debit Card</option>
+          <option value="Net Banking">Net Banking</option>
+          <option value="UPI">UPI</option>
+        </select>
+      </div> 
+      <div class="form-group">
+        <label for="totalAmount">Price</label>
+        <p class="form-control-plaintext">₹{{ payment.total_Amount }}</p>
+      </div>
+      <div class="form-group">
+        <label for="shippingAmount">Shipping Amount</label>
+        <p class="form-control-plaintext">₹{{ payment.shipping_Amount }}</p>
+      </div>
+      <div class="form-group">
+        <label for="discountAmount">Discount Amount</label>
+        <p class="form-control-plaintext">₹{{ payment.discount_Amount }}</p>
+      </div>
+      <div class="form-group">
+        <label for="netAmount">Net Amount</label>
+        <p class="form-control-plaintext">₹{{ payment.net_Amount }}</p>
+      </div> 
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,40 @@
+
+<div class="container">
+    <form #productform="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <h1>Edit Product Details</h1>
+        </div>
+        <div class="form-group">
+            <label for="id">id</label><br>
+            <input #ProdId type="number" readonly name="id" class="form-control" [(ngModel)]="product">
+        </div>
+        <div class="form-group">
+            <label for="name">Product Name</label><br>
+            <input #ProdName="ngModel"  name="ProdName" class="form-control" [(ngModel)]="product.prodName">
+        </div>
+        <div class="form-group">
+            <label for="description">Product description</label><br>
+            <input #Description="ngModel"  name="description" class="form-control" [(ngModel)]="product.description">
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label><br>
+            <input #image="ngModel"  name="image" class="form-control" [(ngModel)]="product.image">
+        </div>
+        <div class="form-group">
+            <label for="availaibility">Availability</label><br>
+            <input #availaibility="ngModel"  name="availaibility" class="form-control" [(ngModel)]="product.availaibility">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label><br>
+            <input #Price="ngModel"  name="price" class="form-control" [(ngModel)]="product.price">
+        </div>
+        <div class="form-group">
+            <label for="quantity">Price</label><br>
+            <input #quantity="ngModel"  name="quantity" class="form-control" [(ngModel)]="product.stock_Quantity">
+        </div>
+        <div class="form-group">
+            <a routerLink="editCategory"></a>
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>

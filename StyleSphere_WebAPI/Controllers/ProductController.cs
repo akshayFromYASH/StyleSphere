@@ -33,6 +33,10 @@ namespace StyleSphere.Controllers{
         
         }
 
+        [HttpGet("GetProductsByUserId/{userid}")]
+        public async Task<ActionResult<List<Product>>> GetProductsByUserId(int userid){
+            return await productRepository.GetProductsByUserId(userid);
+        }
         [HttpPost]
         public async Task<ActionResult<Product>> Create(Product data){
             return await productRepository.Create(data);

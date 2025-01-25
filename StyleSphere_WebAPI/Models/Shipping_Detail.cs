@@ -8,5 +8,7 @@ namespace StyleSphere.Models{
         public string ShippingTo { get; set; }
         public string ContactDetails { get; set; }
         public string Address { get; set; }
+        public int UserId { get; set; }
+        public int ProdId { get; set; }
     }
 }

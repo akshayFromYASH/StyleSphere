@@ -301,3 +301,4 @@ D:\StyleShpere\StyleSphere_WebAPI\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Scr
 D:\StyleShpere\StyleSphere_WebAPI\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\StyleShpere\StyleSphere_WebAPI\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\StyleShpere\StyleSphere_WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\StyleShpere\StyleSphere_WebAPI\obj\Debug\net8.0\StyleSphere.sourcelink.json

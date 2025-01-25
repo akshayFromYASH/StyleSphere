@@ -5,5 +5,6 @@ namespace StyleSphere.Repository{
     // Interface that inherits IRepository Interface with specialized type User
     public interface IOrderRepository: IRepository<Order>{
         public Task<ActionResult<Order>> GetById(int id);
+        // public Task<ActionResult<OrderProductShipping>> OrderShippingDetails(int id);
     }
 }
